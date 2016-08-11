@@ -11505,8 +11505,8 @@ wysihtml5.commands.formatCode = {
     return wysihtml5.commands.formatInline.state(composer, command, "u");
   }
 };
-wysihtml5.commands.undo = {
-    exec: function(composer) {
+;wysihtml5.commands.undo = {
+  exec: function(composer) {
     return composer.undoManager.undo();
   },
 
@@ -11514,8 +11514,8 @@ wysihtml5.commands.undo = {
     return false;
   }
 };
-wysihtml5.commands.createTable = {
-    exec: function(composer, command, value) {
+;wysihtml5.commands.createTable = {
+  exec: function(composer, command, value) {
       var col, row, html;
       if (value && value.cols && value.rows && parseInt(value.cols, 10) > 0 && parseInt(value.rows, 10) > 0) {
           if (value.tableStyle) {
@@ -11543,8 +11543,8 @@ wysihtml5.commands.createTable = {
       return false;
   }
 };
-wysihtml5.commands.mergeTableCells = {
-    exec: function(composer, command) {
+;wysihtml5.commands.mergeTableCells = {
+  exec: function(composer, command) {
       if (composer.tableSelection && composer.tableSelection.start && composer.tableSelection.end) {
           if (this.state(composer, command)) {
               wysihtml5.dom.table.unmergeCell(composer.tableSelection.start);
